@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modelo.Categoria" table="categoria" catalog="`TORNEO-MUNICIPAL-111MIL`">
+        <id name="idCategoria" type="java.lang.Integer">
+            <column name="idCategoria" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="nombreCategoria" type="string">
+            <column name="nombreCategoria" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

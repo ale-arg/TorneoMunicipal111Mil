@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modelo.DetalleDisciplina" table="detalle_disciplina" catalog="`TORNEO-MUNICIPAL-111MIL`">
+        <composite-id name="id" class="modelo.DetalleDisciplinaId">
+            <key-property name="idInsAsp" type="int">
+                <column name="idInsAsp" />
+            </key-property>
+            <key-property name="idDetDis" type="int">
+                <column name="idDetDis" />
+            </key-property>
+        </composite-id>
+        <property name="disciplina" type="string">
+            <column name="disciplina" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

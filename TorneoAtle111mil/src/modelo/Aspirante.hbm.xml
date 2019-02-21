@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modelo.Aspirante" table="aspirante" catalog="`TORNEO-MUNICIPAL-111MIL`">
+        <id name="idAspirante" type="java.lang.Integer">
+            <column name="idAspirante" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="50" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="50" />
+        </property>
+        <property name="fechaNacimiento" type="string">
+            <column name="`fecha-nacimiento`" length="50" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="1" />
+        </property>
+        <property name="dni" type="string">
+            <column name="dni" length="50" />
+        </property>
+        <property name="escuelaId" type="java.lang.Integer">
+            <column name="escuelaID" />
+        </property>
+    </class>
+</hibernate-mapping>

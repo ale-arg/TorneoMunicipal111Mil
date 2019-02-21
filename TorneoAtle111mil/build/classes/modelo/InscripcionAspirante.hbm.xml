@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modelo.InscripcionAspirante" table="`inscripcion-aspirante`" catalog="`TORNEO-MUNICIPAL-111MIL`">
+        <id name="idInsAsp" type="java.lang.Integer">
+            <column name="idInsAsp" />
+            <generator class="identity" />
+        </id>
+        <property name="aspirante" type="string">
+            <column name="aspirante" length="100" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="categoria" length="50" />
+        </property>
+        <set name="detalleDisciplinas" table="detalle_disciplina" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idInsAsp" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleDisciplina" />
+        </set>
+    </class>
+</hibernate-mapping>
